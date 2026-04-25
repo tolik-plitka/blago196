@@ -1,0 +1,74 @@
+---
+import { Star, User, MessageCircle } from '@lucide/astro';
+
+const reviews = [
+  {
+    rating: 5,
+    text: 'Отличная работа! Уложили плитку во дворе аккуратно и в срок. Цена устроила, качество превзошло ожидания. Рекомендую!',
+    author: 'Алексей М.',
+    location: 'Екатеринбург',
+    color: 'orange',
+  },
+  {
+    rating: 5,
+    text: 'Заказывали укладку плитки на даче. Сделали всё по высшему разряду! Теперь у нас красивые дорожки и площадка для машины.',
+    author: 'Елена В.',
+    location: 'Свердловская область',
+    color: 'blue',
+  },
+  {
+    rating: 5,
+    text: 'Профессионалы своего дела! Быстро, качественно, недорого. Плитка лежит уже год, всё идеально. Спасибо Турсунали blago196!',
+    author: 'Игорь К.',
+    location: 'Свердловская область',
+    color: 'green',
+  },
+];
+---
+
+<section id="reviews" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">Отзывы</span>
+      <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mt-2 mb-4">Что говорят клиенты</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto text-lg">Наши отзывы на Авито - лучшее подтверждение качества</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 mb-12">
+      {
+        reviews.map((review) => (
+          <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400">
+                {[...Array(review.rating)].map(() => (
+                  <Star class="w-5 h-5 fill-current" />
+                ))}
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6">"{review.text}"</p>
+            <div class="flex items-center">
+              <div class={`w-10 h-10 bg-${review.color}-100 rounded-full flex items-center justify-center mr-3`}>
+                <User class={`w-5 h-5 text-${review.color}-500`} />
+              </div>
+              <div>
+                <div class="font-semibold text-gray-800">{review.author}</div>
+                <div class="text-sm text-gray-500">{review.location}</div>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="text-center">
+      <a
+        href="https://www.avito.ru/brands/d97c80f2edb0686f765a5d5ce1704aed/all/predlozheniya_uslug?gdlkerfdnwq=101"
+        target="_blank"
+        class="inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-bold rounded-xl transition-all transform hover:scale-105 shadow-xl"
+      >
+        <MessageCircle class="w-5 h-5 mr-2" />
+        Все отзывы на Avito
+      </a>
+    </div>
+  </div>
+</section>

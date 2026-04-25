@@ -44,5 +44,47 @@ const { language, textDirection } = I18N;
     <slot />
 
     <BasicScripts />
+
+    <!-- LOADER -->
+    <div id="global-loader" style="position:fixed;z-index:99999;inset:0;display:flex;align-items:center;justify-content:center;background:#000;transition:opacity .3s;opacity:0;pointer-events:none;">
+      <svg width="64" height="64" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
+        <g fill="none" fill-rule="evenodd" stroke-width="4">
+          <circle cx="22" cy="22" r="20" stroke-opacity=".2"/>
+          <path d="M42 22c0-11.046-8.954-20-20-20">
+            <animateTransform attributeName="transform" type="rotate" from="0 22 22" to="360 22 22" dur="1s" repeatCount="indefinite"/>
+          </path>
+        </g>
+      </svg>
+    </div>
+    <script>
+      const loader = document.getElementById('global-loader');
+      const showLoader = () => {
+        if (!loader) return;
+        loader.style.opacity = '1';
+        loader.style.pointerEvents = 'auto';
+      };
+      const hideLoader = () => {
+        if (!loader) return;
+        loader.style.opacity = '0';
+        loader.style.pointerEvents = 'none';
+      };
+
+      document.addEventListener('astro:before-preparation', showLoader);
+      document.addEventListener('astro:after-swap', hideLoader);
+      document.addEventListener('astro:page-load', hideLoader);
+
+      window.addEventListener('load', hideLoader);
+      window.addEventListener('pageshow', hideLoader);
+      document.addEventListener('DOMContentLoaded', () => {
+        // Fallback for cases where load event is skipped.
+        hideLoader();
+      });
+
+      setTimeout(() => {
+        // Hard safety net: prevent any permanent overlay state.
+        hideLoader();
+      }, 4000);
+    </script>
+    <!-- END LOADER -->
   </body>
 </html>

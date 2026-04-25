@@ -1,228 +1,124 @@
 ---
-import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'О компании',
+  description:
+    'Ландшафтный дизайн и благоустройство территории под ключ в Екатеринбурге: проектирование, мощение, дренаж, автополив, озеленение.',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h1 class="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+        О компании Турсунали blago196 | Ландшафтный дизайн для жизни и отдыха
+      </h1>
+      <p class="text-lg text-slate-700 dark:text-slate-300">
+        Мы проектируем и реализуем ландшафтный дизайн под ключ: от идеи, мощения дорожек и дренажа до автополива,
+        озеленения и финальной сдачи объекта.
+      </p>
+    </div>
+  </section>
 
-  <Hero
-    tagline="About us"
-    image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
-    }}
-  >
-    <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white"> Beautiful Website Templates</span>
-    </Fragment>
+  <section class="pb-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-12">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">Кто мы</h2>
+        <p class="text-slate-700 dark:text-slate-300">
+          Мы - команда архитекторов и инженеров, которая делает продуманные до мелочей пространства. Облагораживаем
+          участки с помощью укладки тротуарной плитки, устройства газона, создания функциональных зон отдыха и
+          инженерных систем автополива.
+        </p>
+      </div>
 
-    <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
-    </Fragment>
-  </Hero>
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">Наш подход</h2>
+        <div class="space-y-3 text-slate-700 dark:text-slate-300">
+          <p>
+            <strong>Индивидуальный подход:</strong> создаем уникальный ландшафтный дизайн, который отражает ваш вкус и задачи
+            участка.
+          </p>
+          <p>
+            <strong>Комплексно и под ключ:</strong> берем на себя весь цикл работ, чтобы вы не собирали десяток подрядчиков.
+          </p>
+          <p>
+            <strong>Технологично и надежно:</strong> применяем грамотный дренаж, автополив и проверенные материалы для долгого
+            срока службы.
+          </p>
+        </div>
+      </div>
 
-  <!-- Stats Widget ****************** -->
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">Цифры и факты</h2>
+        <ul class="grid gap-3 sm:grid-cols-2 text-slate-700 dark:text-slate-300">
+          <li class="p-4 rounded-xl border border-slate-200 dark:border-slate-700">Работаем с 2006 года.</li>
+          <li class="p-4 rounded-xl border border-slate-200 dark:border-slate-700">Реализовали более 500 проектов.</li>
+          <li class="p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+            Общая площадь работ более 150 000 кв. м.
+          </li>
+          <li class="p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+            В штате более 10 узких специалистов.
+          </li>
+        </ul>
+      </div>
 
-  <Stats
-    title="Statistics about us"
-    stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
-    ]}
-  />
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">Команда</h2>
+        <p class="text-slate-700 dark:text-slate-300 mb-4">
+          Наша команда - профессионалы с практическим опытом, которые относятся к каждому участку как к инженерному и
+          эстетическому проекту одновременно.
+        </p>
+        <ul class="space-y-2 text-slate-700 dark:text-slate-300">
+          <li><strong>Ландшафтный архитектор:</strong> превращает ваши пожелания в рабочую концепцию.</li>
+          <li><strong>Инженер:</strong> рассчитывает системы, ливневую канализацию и дренаж.</li>
+          <li><strong>Прораб и монтажная бригада:</strong> контролируют качество реализации на каждом этапе.</li>
+        </ul>
+      </div>
 
-  <!-- Features3 Widget ************** -->
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">Работы в деталях</h2>
+        <p class="text-slate-700 dark:text-slate-300 mb-3">
+          Здесь лучше всего работают фото и видео с объектов: они показывают качество исполнения, стиль и аккуратность
+          деталей.
+        </p>
+        <p class="text-slate-700 dark:text-slate-300">
+          <strong>Пример:</strong> Мощение. В проекте используем сочетание крупноформатной плитки и гравийной отсыпки. Особое
+          внимание уделяем уклонам, чтобы вода не застаивалась, а дорожки логично связывали все зоны участка.
+        </p>
+      </div>
 
-  <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
-    columns={3}
-    isBeforeContent={true}
-    items={[
-      {
-        title: 'Educational',
-        description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Interior Design',
-        description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Photography',
-        description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
-      },
-    ]}
-  />
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">Лицензии, дипломы, сертификаты</h2>
+        <p class="text-slate-700 dark:text-slate-300">
+          Мы подтверждаем квалификацию документально. Раздел с лицензиями и сертификатами повышает доверие и показывает
+          серьезный подход к качеству работ.
+        </p>
+      </div>
 
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    columns={3}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'E-commerce',
-        description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Blog',
-        description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Business',
-        description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
-    }}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
-    items={[
-      {
-        title: 'Customer-centric approach',
-        description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
-      },
-      {
-        title: 'Constant Improvement',
-        description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
-      },
-      {
-        title: 'Ethical Practices',
-        description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-      },
-    ]}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
-    isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
-    items={[
-      {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
-      },
-      {
-        title: 'Positive customer feedback and reviews',
-        description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
-      },
-      {
-        title: 'Awards and recognition as industry experts',
-        description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
-    items={[
-      {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
-      },
-      {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Technical Support"
-    tagline="Contact us"
-    columns={2}
-    items={[
-      {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
-      },
-      {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
-      },
-    ]}
-  />
+      <div class="p-6 md:p-8 rounded-2xl bg-slate-900 text-white">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">Закажите консультацию по вашему участку</h2>
+        <p class="text-slate-200 mb-6">
+          Ответим на вопросы, подскажем оптимальное решение и подготовим понятный план работ по благоустройству
+          территории.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a
+            href="tel:+79252224190"
+            class="px-5 py-3 rounded-lg bg-orange-500 hover:bg-orange-600 transition font-semibold"
+          >
+            Позвонить
+          </a>
+          <a
+            href="https://t.me/+79252224190"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-5 py-3 rounded-lg border border-white/30 hover:border-white transition font-semibold"
+          >
+            Написать в Telegram
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>

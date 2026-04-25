@@ -1,0 +1,40 @@
+---
+const portfolioItems = [
+  { image: 'https://40.img.avito.st/image/1/1.7fNhG7a560fVOFeY2Fi76TdnQRjTvkGYwzhMGNOuRRg.jROZmkDvLoSUVVyDek6McjP9HTIR6JE_5lc6_PggHYQ', title: 'Укладка во дворе', category: 'Тротуарная плитка' },
+  { image: 'https://30.img.avito.st/image/1/1.etonora5fG6TgcCxns9u-E_e1jGVB9axhYHbMZUX0jE.ezT7BXYUWOsM2tNFjHP-_WzIrcER2Vppyw09husXDCk?cqp=2.ZTpOdDGMwjQ9FxykYYx1emcExdwnB4QJTJ3gQLJr84nkJsv0XyRRJhYQ4iKI_UhK0gA=', title: 'Дорожки', category: 'Брусчатка' },
+  { image: 'https://70.img.avito.st/image/1/1.M7ddfba5NQPpXonc5AJ2gksJn1zv2J_c_16SXO_Im1w.1Cm8Rh5gkCXtx-ocHoXn996SCap2TXFMwEJXhUWAjL4', title: 'Укладка плитки', category: 'Качественная работа' },
+  { image: 'https://00.img.avito.st/image/1/1.Cd_Ltra5D2t_lbO0cr14rL3EpTR5E6W0aZWoNHkDoTQ.CrlGbTk1HgeLP7t7-cB6D-1TQd2YbJI0aXNQfnGEx4g?cqp=2.ZTpOdDGMwjQ9FxykYYx1emcExdwnB4QJTJ3gQLJr84nkJsv0XyRRJhYQ4iKI_UhK0gA=', title: 'Бордюры', category: 'Установка бордюров' },
+  { image: 'https://00.img.avito.st/image/1/1.lXuFiLa5k88xqy8QPLvWSav7OZA3LTkQJ6s0kDc9PZA.YxJFL1WH5HlJkUtdkHAdAZaIePdrxlIk7CWe2LCwCSk?cqp=2.ZTpOdDGMwjQ9FxykYYx1emcExdwnB4QJTJ3gQLJr84nkJsv0XyRRJhYQ4iKI_UhK0gA=', title: 'Парковка', category: 'Усиленная плитка' },
+  { image: 'https://20.img.avito.st/image/1/1.oBkX8La5pq2j0xpyrqnTRTqfDPKlVQxytdMB8qVFCPI.lXlTzhGdvzpOR6NmtLeENgcW3QqBYxwsTkAiUbfnmzk?cqp=2.ZTpOdDGMwjQ9FxykYYx1emcExdwnB4QJTJ3gQLJr84nkJsv0XyRRJhYQ4iKI_UhK0gA=', title: 'Территория', category: 'Благоустройство' },
+];
+---
+
+<section id="portfolio" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">Портфолио</span>
+      <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mt-2 mb-4">Наши работы</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto text-lg">Примеры выполненных проектов с укладкой тротуарной плитки</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {portfolioItems.map((item) => (
+        <div class="portfolio-item group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer">
+          <img src={item.image} alt={item.title} class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <div>
+              <h3 class="text-white font-bold text-xl">{item.title}</h3>
+              <p class="text-gray-300">{item.category}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .portfolio-item:hover img {
+    transform: scale(1.05);
+  }
+</style>

@@ -1,0 +1,89 @@
+---
+import { BrickWall, Shovel, Flower, Layers, Hammer, Sun, Check } from '@lucide/astro';
+
+const services = [
+  {
+    icon: BrickWall,
+    title: 'Укладка тротуарной плитки',
+    description: 'Профессиональная укладка плитки любой сложности. Дорожки, площади, паркинги и дворовые территории.',
+    features: ['Гарантия на работы', 'Любой вид плитки', 'Соблюдение уклонов'],
+    color: 'orange',
+  },
+  {
+    icon: Shovel,
+    title: 'Подготовка основания',
+    description: 'Качественная подготовка основания - залог долговечности покрытия. Гравий, песок, геотекстиль.',
+    features: ['Вывоз грунта', 'Утрамбовка', 'Дренаж'],
+    color: 'blue',
+  },
+  {
+    icon: Flower,
+    title: 'Бордюры и клумбы',
+    description: 'Установка бордюров, создание цветников и клумб. Оформление территории в едином стиле.',
+    features: ['Поребрики', 'Газоны', 'Многолетники'],
+    color: 'green',
+  },
+  {
+    icon: Layers,
+    title: 'Ступени и лестницы',
+    description: 'Изготовление и укладка ступеней из тротуарной плитки. Входные группы и садовые лестницы.',
+    features: ['Проектирование', 'Подсветка', 'Перила'],
+    color: 'purple',
+  },
+  {
+    icon: Hammer,
+    title: 'Демонтаж и ремонт',
+    description: 'Демонтаж старого покрытия, ремонт плитки, замена поврежденных элементов. Быстро и аккуратно.',
+    features: ['Вывоз мусора', 'Реставрация', 'Выравнивание'],
+    color: 'red',
+  },
+  {
+    icon: Sun,
+    title: 'Подсветка и декор',
+    description: 'Установка садовой подсветки, декоративных элементов. Создаем уют и атмосферу на вашем участке.',
+    features: ['Светодиоды', 'Солар-лампы', 'Декор'],
+    color: 'yellow',
+  },
+];
+---
+
+<section id="services" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">Наши услуги</span>
+      <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mt-2 mb-4">Что мы предлагаем</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+        Полный спектр услуг по благоустройству территории с использованием современных материалов и технологий
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {services.map((service) => {
+        const IconComponent = service.icon;
+        return (
+          <div class="service-card bg-gray-50 rounded-2xl p-8 transition-all duration-300 border border-gray-100 hover:shadow-lg hover:-translate-y-2">
+            <div class={`w-14 h-14 bg-${service.color}-100 rounded-xl flex items-center justify-center mb-6`}>
+              <IconComponent class={`w-7 h-7 text-${service.color}-500`} />
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">{service.title}</h3>
+            <p class="text-gray-600 mb-4">{service.description}</p>
+            <ul class="space-y-2">
+              {service.features.map((feature) => (
+                <li class="flex items-center text-gray-500 text-sm">
+                  <Check class="w-4 h-4 text-green-500 mr-2" />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
+<style>
+  .service-card:hover {
+    transform: translateY(-8px);
+  }
+</style>

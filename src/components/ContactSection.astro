@@ -1,0 +1,66 @@
+---
+import { Phone, MapPin, Clock, Send, MessageCircle } from '@lucide/astro';
+---
+
+<section id="contact" class="py-20 bg-gray-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div>
+      <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">Контакты</span>
+      <h2 class="text-3xl md:text-5xl font-bold text-white mt-2 mb-6">Свяжитесь с нами</h2>
+      <p class="text-gray-400 text-lg mb-8">Готовы обсудить ваш проект? Звоните или пишите, мы всегда на связи!</p>
+
+      <div class="space-y-6">
+      
+        <a href="tel:+79252224190" class="flex items-center space-x-4 group">
+          <div class="w-14 h-14 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500 transition">
+            <Phone class="w-6 h-6 text-orange-500 group-hover:text-white transition" />
+          </div>
+          <div>
+            <div class="text-gray-400 text-sm">Телефон</div>
+            <div class="text-white text-xl font-bold"><span class="hover:underline">Позвонить: +7 925 222 41 90</span></div>
+          </div>
+        </a>
+
+        <a href="https://t.me/+79252224190" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-4 group">
+          <div class="w-14 h-14 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500 transition">
+            <Send class="w-6 h-6 text-orange-500 group-hover:text-white transition" />
+          </div>
+          <div>
+            <div class="text-gray-400 text-sm">Telegram</div>
+            <div class="text-white text-xl font-bold"><span class="hover:underline">Написать в Telegram</span></div>
+          </div>
+        </a>
+
+        <a href="https://max.ru/+79252224190" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-4 group">
+          <div class="w-14 h-14 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500 transition">
+            <MessageCircle class="w-6 h-6 text-orange-500 group-hover:text-white transition" />
+          </div>
+          <div>
+            <div class="text-gray-400 text-sm">Max</div>
+            <div class="text-white text-xl font-bold"><span class="hover:underline">Написать в Max</span></div>
+          </div>
+        </a>
+
+        <div class="flex items-center space-x-4">
+          <div class="w-14 h-14 bg-orange-500/20 rounded-xl flex items-center justify-center">
+            <MapPin class="w-6 h-6 text-orange-500" />
+          </div>
+          <div>
+            <div class="text-gray-400 text-sm">Район работы</div>
+            <div class="text-white text-l font-bold">Екатеринбург, Урал и Свердловская область</div>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-4">
+          <div class="w-14 h-14 bg-orange-500/20 rounded-xl flex items-center justify-center">
+            <Clock class="w-6 h-6 text-orange-500" />
+          </div>
+          <div>
+            <div class="text-gray-400 text-sm">Режим работы</div>
+            <div class="text-white text-xl font-bold">Ежедневно 9:00 - 20:00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

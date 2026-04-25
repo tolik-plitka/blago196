@@ -1,34 +1,36 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: 'Турсунали blago196 - Благоустройство территории'
+  site: 'https://blago196.ru'
   base: '/'
   trailingSlash: false
 
-  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+  googleSiteVerificationId: false
+  yandexSiteVerificationId: false
 
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: 'Турсунали blago196 - Профессиональная укладка плитки в Екатеринбурге'
+    template: '%s — Турсунали blago196'
+  description: 'Укладка тротуарной плитки под ключ в Екатеринбурге и области. Гарантия качества, доступные цены. Звоните: +7 925 222 41 90.'
+  keywords: 'укладка тротуарной плитки, брусчатка, Екатеринбург, Турсунали blago196, благоустройство'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: 'blago196.ru благо196.рф'
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/og-image.jpg'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@arthelokyo'
-    site: '@arthelokyo'
+    handle: '@blago196'
+    site: '@blago196'
     cardType: summary_large_image
 
 i18n:
-  language: en
+  language: ru
   textDirection: ltr
 
 apps:

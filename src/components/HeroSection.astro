@@ -1,0 +1,98 @@
+---
+import { Star, Phone, Image } from '@lucide/astro';
+
+interface Props {
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  primaryCta?: { text: string; href: string };
+  secondaryCta?: { text: string; href: string };
+}
+
+const {
+  title = 'Укладка тротуарной плитки под ключ',
+  subtitle = 'Благоустройство территории на Урале',
+  description = 'Превращаем Вашу территорию в произведение искусства! Качество, гарантия и индивидуальный подход.',
+  primaryCta = { text: '+7 925 222 41 90', href: 'tel:+79252224190' },
+  secondaryCta = { text: 'Смотреть работы', href: '#portfolio' },
+} = Astro.props;
+---
+
+<section class="relative min-h-screen flex items-center justify-center pt-20">
+  <div
+    class="hero-pattern absolute inset-0 bg-cover bg-center"
+    style="background-image: url('/1.eDg2Lba41NEAhBbUShQOfFWM1teIjFbZQInW04aE3NuA.webp');"
+  >
+  </div>
+  <div class="gradient-overlay absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/30"></div>
+  <div class="absolute inset-0 w-full h-full overflow-hidden z-0">
+    <video
+      class="w-full h-full object-cover absolute inset-0"
+      src="/large%20(online-video-cutter.com).webm"
+      poster="/large.jpg"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      style="object-fit:cover;object-position:center;min-width:100%;min-height:100%;background:#000;"
+    >
+      <img src="/large.jpg" alt="hero background" class="w-full h-full object-cover" />
+    </video>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex justify-center items-center min-h-[60vh]">
+    <div class="max-w-3xl w-full">
+      <div class="inline-flex items-center bg-orange-500/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+        <Star class="w-4 h-4 text-yellow-400 mr-2 fill-current" />
+        <span class="text-white font-medium">{subtitle}</span>
+      </div>
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
+        Укладка тротуарной
+        <span class="text-orange-500">плитки</span>
+        под ключ
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
+        {description}
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a
+          href={primaryCta.href}
+          class="inline-flex items-center justify-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl transition-all transform hover:scale-105 shadow-xl phone-pulse"
+        >
+          <Phone class="w-5 h-5 mr-2" />
+          {primaryCta.text}
+        </a>
+        <a
+          href={secondaryCta.href}
+          class="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-bold rounded-xl transition-all border border-white/30"
+        >
+          <Image class="w-5 h-5 mr-2" />
+          {secondaryCta.text}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <svg class="w-8 h-8 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+    </svg>
+  </div>
+</section>
+
+<style>
+  .phone-pulse {
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgba(234, 88, 12, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 0 15px rgba(234, 88, 12, 0);
+    }
+  }
+</style>
